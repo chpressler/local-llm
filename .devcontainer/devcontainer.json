@@ -30,6 +30,10 @@
 			  ] 
 		}
 	},
+	"runArgs": [
+        "-v", "${localEnv:SSH_AUTH_SOCK}:${localEnv:SSH_AUTH_SOCK}",
+        "-e", "SSH_AUTH_SOCK=${localEnv:SSH_AUTH_SOCK}"
+    ],
 	"postCreateCommand": "pip3 install --user -r requirements.txt"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
